@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.EnomaticDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.EnomaticDto" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="agentId" property="agentid" jdbcType="VARCHAR" />
+    <result column="merchantId" property="merchantid" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="county" property="county" jdbcType="VARCHAR" />
+    <result column="provinceId" property="provinceid" jdbcType="INTEGER" />
+    <result column="cityId" property="cityid" jdbcType="INTEGER" />
+    <result column="countyId" property="countyid" jdbcType="INTEGER" />
+    <result column="channelNum" property="channelnum" jdbcType="INTEGER" />
+    <result column="productOneId" property="productoneid" jdbcType="VARCHAR" />
+    <result column="productTwoId" property="producttwoid" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="startTime" property="starttime" jdbcType="BIGINT" />
+    <result column="merchantName" property="merchantname" jdbcType="VARCHAR" />
+    <result column="agentName" property="agentname" jdbcType="VARCHAR" />
+    <result column="endTime" property="endtime" jdbcType="BIGINT" />
+    <result column="addressDetails" property="addressdetails" jdbcType="LONGVARCHAR" />
+    <result column="mac" property="mac" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_enomatic
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.EnomaticDto" >
+    insert into tb_enomatic (id, agentId, merchantId, 
+      createTime, updateTime, province, 
+      city, county, provinceId, 
+      cityId, countyId, channelNum, 
+      productOneId, productTwoId, name, 
+      startTime, merchantName, agentName, 
+      endTime, addressDetails, mac
+      )
+    values (#{id,jdbcType=VARCHAR}, #{agentid,jdbcType=VARCHAR}, #{merchantid,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=BIGINT}, #{updatetime,jdbcType=BIGINT}, #{province,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{county,jdbcType=VARCHAR}, #{provinceid,jdbcType=INTEGER}, 
+      #{cityid,jdbcType=INTEGER}, #{countyid,jdbcType=INTEGER}, #{channelnum,jdbcType=INTEGER}, 
+      #{productoneid,jdbcType=VARCHAR}, #{producttwoid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{starttime,jdbcType=BIGINT}, #{merchantname,jdbcType=VARCHAR}, #{agentname,jdbcType=VARCHAR}, 
+      #{endtime,jdbcType=BIGINT}, #{addressdetails,jdbcType=LONGVARCHAR}, #{mac,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.EnomaticDto" >
+    update tb_enomatic
+    set agentId = #{agentid,jdbcType=VARCHAR},
+      merchantId = #{merchantid,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      provinceId = #{provinceid,jdbcType=INTEGER},
+      cityId = #{cityid,jdbcType=INTEGER},
+      countyId = #{countyid,jdbcType=INTEGER},
+      channelNum = #{channelnum,jdbcType=INTEGER},
+      productOneId = #{productoneid,jdbcType=VARCHAR},
+      productTwoId = #{producttwoid,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      startTime = #{starttime,jdbcType=BIGINT},
+      merchantName = #{merchantname,jdbcType=VARCHAR},
+      agentName = #{agentname,jdbcType=VARCHAR},
+      endTime = #{endtime,jdbcType=BIGINT},
+      addressDetails = #{addressdetails,jdbcType=LONGVARCHAR},
+      mac = #{mac,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, agentId, merchantId, createTime, updateTime, province, city, county, provinceId, 
+    cityId, countyId, channelNum, productOneId, productTwoId, name, startTime, merchantName, 
+    agentName, endTime, addressDetails, mac
+    from tb_enomatic
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, agentId, merchantId, createTime, updateTime, province, city, county, provinceId, 
+    cityId, countyId, channelNum, productOneId, productTwoId, name, startTime, merchantName, 
+    agentName, endTime, addressDetails, mac
+    from tb_enomatic
+  </select>
+</mapper>

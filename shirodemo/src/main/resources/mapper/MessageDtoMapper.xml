@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.MessageDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.MessageDto" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="VARCHAR" />
+    <result column="sysUserId" property="sysuserid" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="isRead" property="isread" jdbcType="BIT" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_message
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.MessageDto" >
+    insert into tb_message (id, userId, sysUserId, 
+      createTime, updateTime, type, 
+      isRead, content)
+    values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{sysuserid,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=BIGINT}, #{updatetime,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, 
+      #{isread,jdbcType=BIT}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.MessageDto" >
+    update tb_message
+    set userId = #{userid,jdbcType=VARCHAR},
+      sysUserId = #{sysuserid,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT},
+      type = #{type,jdbcType=INTEGER},
+      isRead = #{isread,jdbcType=BIT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, userId, sysUserId, createTime, updateTime, type, isRead, content
+    from tb_message
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, userId, sysUserId, createTime, updateTime, type, isRead, content
+    from tb_message
+  </select>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.WineCapacityDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.WineCapacityDto" >
+    <id column="capacityId" property="capacityid" jdbcType="VARCHAR" />
+    <result column="capacity" property="capacity" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_wine_capacity
+    where capacityId = #{capacityid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.WineCapacityDto" >
+    insert into tb_wine_capacity (capacityId, capacity, createTime, 
+      updateTime)
+    values (#{capacityid,jdbcType=VARCHAR}, #{capacity,jdbcType=INTEGER}, #{createtime,jdbcType=BIGINT}, 
+      #{updatetime,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.WineCapacityDto" >
+    update tb_wine_capacity
+    set capacity = #{capacity,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT}
+    where capacityId = #{capacityid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select capacityId, capacity, createTime, updateTime
+    from tb_wine_capacity
+    where capacityId = #{capacityid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select capacityId, capacity, createTime, updateTime
+    from tb_wine_capacity
+  </select>
+</mapper>

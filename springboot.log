@@ -1,0 +1,114 @@
+2019-04-30 14:08:43.337  INFO 11824 --- [main] c.s.publib.admin.AdminApplication        : Starting AdminApplication on shan with PID 11824 (/home/project/javaPro/ShanghaoEnomaticNew/admin/target/classes started by root in /home/project/javaPro/ShanghaoEnomaticNew)
+2019-04-30 14:08:43.341  INFO 11824 --- [main] c.s.publib.admin.AdminApplication        : No active profile set, falling back to default profiles: default
+2019-04-30 14:08:44.176  INFO 11824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-30 14:08:44.178  INFO 11824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-30 14:08:44.201  INFO 11824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-04-30 14:08:44.407  INFO 11824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86492385] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-30 14:08:44.621  INFO 11824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9097 (http)
+2019-04-30 14:08:44.635  INFO 11824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-30 14:08:44.636  INFO 11824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-30 14:08:44.640  INFO 11824 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-04-30 14:08:44.694  INFO 11824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-30 14:08:44.694  INFO 11824 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1213 ms
+2019-04-30 14:08:44.698  INFO 11824 --- [main] c.s.p.admin.config.DruidConfiguration    : init Druid Servlet Configuration 
+2019-04-30 14:08:44.729  INFO 11824 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet statViewServlet was not registered (possibly already registered?)
+2019-04-30 14:08:44.731  INFO 11824 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter webStatFilter was not registered (possibly already registered?)
+2019-04-30 14:08:45.432  INFO 11824 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-04-30 14:08:45.538  INFO 11824 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-30 14:08:45.791  INFO 11824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-30 14:08:45.802  INFO 11824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-30 14:08:45.825  INFO 11824 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-30 14:08:45.948  INFO 11824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllUsingGET_1
+2019-04-30 14:08:46.003  INFO 11824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9097 (http) with context path ''
+2019-04-30 14:08:46.006  INFO 11824 --- [main] c.s.publib.admin.AdminApplication        : Started AdminApplication in 3.052 seconds (JVM running for 3.657)
+2019-04-30 14:09:00.162  INFO 11824 --- [http-nio-9097-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1553307918,1553476873,1554343521] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2019-04-30 14:09:00.166  INFO 11824 --- [http-nio-9097-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-30 14:09:00.167  INFO 11824 --- [http-nio-9097-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-30 14:09:00.172  INFO 11824 --- [http-nio-9097-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-04-30 14:09:00.191  INFO 11824 --- [http-nio-9097-exec-1] c.s.p.a.c.intercepors.LoginInterceptor   : token没传
+2019-04-30 14:09:42.225  INFO 11824 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-30 19:05:15.587  INFO 5192 --- [main] c.s.publib.admin.AdminApplication        : Starting AdminApplication on shan with PID 5192 (/home/project/javaPro/ShiroDemo/admin/target/classes started by root in /home/project/javaPro/ShiroDemo)
+2019-04-30 19:05:15.625  INFO 5192 --- [main] c.s.publib.admin.AdminApplication        : No active profile set, falling back to default profiles: default
+2019-04-30 19:05:16.536  INFO 5192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-30 19:05:16.537  INFO 5192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-30 19:05:16.559  INFO 5192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-04-30 19:05:16.769  INFO 5192 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7a595b1d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-30 19:05:16.999  INFO 5192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9097 (http)
+2019-04-30 19:05:17.015  INFO 5192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-30 19:05:17.016  INFO 5192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-30 19:05:17.021  INFO 5192 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-04-30 19:05:17.087  INFO 5192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-30 19:05:17.088  INFO 5192 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1413 ms
+2019-04-30 19:05:17.092  INFO 5192 --- [main] c.s.p.admin.config.DruidConfiguration    : init Druid Servlet Configuration 
+2019-04-30 19:05:17.122  INFO 5192 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet statViewServlet was not registered (possibly already registered?)
+2019-04-30 19:05:17.124  INFO 5192 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter webStatFilter was not registered (possibly already registered?)
+2019-04-30 19:05:17.900  INFO 5192 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-04-30 19:05:18.010  INFO 5192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-30 19:05:18.343  INFO 5192 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-30 19:05:18.357  INFO 5192 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-30 19:05:18.382  INFO 5192 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-30 19:05:18.510  INFO 5192 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllUsingGET_1
+2019-04-30 19:05:18.620  INFO 5192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9097 (http) with context path ''
+2019-04-30 19:05:18.625  INFO 5192 --- [main] c.s.publib.admin.AdminApplication        : Started AdminApplication in 3.741 seconds (JVM running for 4.314)
+2019-04-30 19:05:36.338  INFO 5192 --- [http-nio-9097-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1552535492,1553308152; Admin-Token=Bearer%2055e50168-4973-43eb-96ce-458fa396e82b; JSESSIONID=FCF537778CCE91EA7416251CB2A61DBA; sidebarStatus=1] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2019-04-30 19:05:36.344  INFO 5192 --- [http-nio-9097-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-30 19:05:36.345  INFO 5192 --- [http-nio-9097-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-30 19:05:36.352  INFO 5192 --- [http-nio-9097-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-30 19:05:36.372  INFO 5192 --- [http-nio-9097-exec-1] c.s.p.a.c.intercepors.LoginInterceptor   : token没传
+2019-04-30 19:05:55.592  INFO 5192 --- [http-nio-9097-exec-5] c.s.p.a.c.intercepors.LoginInterceptor   : token没传
+2019-04-30 19:09:52.167  INFO 5192 --- [http-nio-9097-exec-4] c.s.p.a.c.intercepors.LoginInterceptor   : token没传
+2019-04-30 19:10:29.415  INFO 5192 --- [http-nio-9097-exec-1] c.s.p.a.c.intercepors.LoginInterceptor   : token没传
+2019-04-30 19:10:36.593  INFO 5192 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-30 19:10:58.259  INFO 5331 --- [main] c.s.publib.admin.AdminApplication        : Starting AdminApplication on shan with PID 5331 (/home/project/javaPro/ShiroDemo/admin/target/classes started by root in /home/project/javaPro/ShiroDemo)
+2019-04-30 19:10:58.266  INFO 5331 --- [main] c.s.publib.admin.AdminApplication        : No active profile set, falling back to default profiles: default
+2019-04-30 19:10:59.298  INFO 5331 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-30 19:10:59.300  INFO 5331 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-30 19:10:59.325  INFO 5331 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-04-30 19:10:59.546  INFO 5331 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$50a70812] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-30 19:10:59.760  INFO 5331 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9097 (http)
+2019-04-30 19:10:59.775  INFO 5331 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-30 19:10:59.775  INFO 5331 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-30 19:10:59.780  INFO 5331 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-04-30 19:10:59.833  INFO 5331 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-30 19:10:59.833  INFO 5331 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1490 ms
+2019-04-30 19:10:59.837  INFO 5331 --- [main] c.s.p.admin.config.DruidConfiguration    : init Druid Servlet Configuration 
+2019-04-30 19:10:59.867  INFO 5331 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet statViewServlet was not registered (possibly already registered?)
+2019-04-30 19:10:59.870  INFO 5331 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter webStatFilter was not registered (possibly already registered?)
+2019-04-30 19:11:00.545  INFO 5331 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-04-30 19:11:00.643  INFO 5331 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-30 19:11:00.885  INFO 5331 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-30 19:11:00.897  INFO 5331 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-30 19:11:00.920  INFO 5331 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-30 19:11:01.037  INFO 5331 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllUsingGET_1
+2019-04-30 19:11:01.086  INFO 5331 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9097 (http) with context path ''
+2019-04-30 19:11:01.088  INFO 5331 --- [main] c.s.publib.admin.AdminApplication        : Started AdminApplication in 3.202 seconds (JVM running for 3.846)
+2019-04-30 19:11:02.155  INFO 5331 --- [http-nio-9097-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1552535492,1553308152; Admin-Token=Bearer%2055e50168-4973-43eb-96ce-458fa396e82b; JSESSIONID=FCF537778CCE91EA7416251CB2A61DBA; sidebarStatus=1] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+2019-04-30 19:11:02.199  INFO 5331 --- [http-nio-9097-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-30 19:11:02.199  INFO 5331 --- [http-nio-9097-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-30 19:11:02.205  INFO 5331 --- [http-nio-9097-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-04-30 19:11:02.216  INFO 5331 --- [http-nio-9097-exec-2] c.s.p.a.c.intercepors.LoginInterceptor   : token没传
+2019-04-30 19:15:43.755  INFO 5331 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-30 19:15:46.236  INFO 5629 --- [main] c.s.publib.admin.AdminApplication        : Starting AdminApplication on shan with PID 5629 (/home/project/javaPro/ShiroDemo/admin/target/classes started by root in /home/project/javaPro/ShiroDemo)
+2019-04-30 19:15:46.239  INFO 5629 --- [main] c.s.publib.admin.AdminApplication        : No active profile set, falling back to default profiles: default
+2019-04-30 19:15:47.096  INFO 5629 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-04-30 19:15:47.100  INFO 5629 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-30 19:15:47.123  INFO 5629 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-04-30 19:15:47.347  INFO 5629 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$527e9e73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-30 19:15:47.542  INFO 5629 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9097 (http)
+2019-04-30 19:15:47.557  INFO 5629 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-30 19:15:47.558  INFO 5629 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-30 19:15:47.563  INFO 5629 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-04-30 19:15:47.617  INFO 5629 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-30 19:15:47.617  INFO 5629 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1352 ms
+2019-04-30 19:15:47.621  INFO 5629 --- [main] c.s.p.admin.config.DruidConfiguration    : init Druid Servlet Configuration 
+2019-04-30 19:15:47.649  INFO 5629 --- [main] o.s.boot.web.servlet.RegistrationBean    : Servlet statViewServlet was not registered (possibly already registered?)
+2019-04-30 19:15:47.651  INFO 5629 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter webStatFilter was not registered (possibly already registered?)
+2019-04-30 19:15:48.332  INFO 5629 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-04-30 19:15:48.430  INFO 5629 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-30 19:15:48.681  INFO 5629 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-30 19:15:48.693  INFO 5629 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-30 19:15:48.715  INFO 5629 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-30 19:15:48.830  INFO 5629 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllUsingGET_1
+2019-04-30 19:15:48.883  INFO 5629 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9097 (http) with context path ''
+2019-04-30 19:15:48.886  INFO 5629 --- [main] c.s.publib.admin.AdminApplication        : Started AdminApplication in 3.085 seconds (JVM running for 3.567)
+2019-04-30 19:16:45.580  INFO 5629 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

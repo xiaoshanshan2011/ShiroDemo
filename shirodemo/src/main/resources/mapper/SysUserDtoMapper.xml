@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.SysUserDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.SysUserDto" >
+    <id column="sysUserId" property="sysuserid" jdbcType="VARCHAR" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="nickName" property="nickname" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="userPhone" property="userphone" jdbcType="VARCHAR" />
+    <result column="userTypeId" property="usertypeid" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="wxOpenId" property="wxopenid" jdbcType="VARCHAR" />
+    <result column="wxUnionId" property="wxunionid" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="realName" property="realname" jdbcType="VARCHAR" />
+    <result column="idCardCode" property="idcardcode" jdbcType="VARCHAR" />
+    <result column="isBan" property="isban" jdbcType="BIT" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="county" property="county" jdbcType="VARCHAR" />
+    <result column="provinceId" property="provinceid" jdbcType="INTEGER" />
+    <result column="cityId" property="cityid" jdbcType="INTEGER" />
+    <result column="countyId" property="countyid" jdbcType="INTEGER" />
+    <result column="userPhoto" property="userphoto" jdbcType="LONGVARCHAR" />
+    <result column="addressDetails" property="addressdetails" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from sys_user
+    where sysUserId = #{sysuserid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.SysUserDto" >
+    insert into sys_user (sysUserId, userName, nickName, 
+      password, userPhone, userTypeId, 
+      createTime, updateTime, status, 
+      wxOpenId, wxUnionId, sex, 
+      realName, idCardCode, isBan, 
+      province, city, county, 
+      provinceId, cityId, countyId, 
+      userPhoto, addressDetails)
+    values (#{sysuserid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{userphone,jdbcType=VARCHAR}, #{usertypeid,jdbcType=INTEGER}, 
+      #{createtime,jdbcType=BIGINT}, #{updatetime,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, 
+      #{wxopenid,jdbcType=VARCHAR}, #{wxunionid,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
+      #{realname,jdbcType=VARCHAR}, #{idcardcode,jdbcType=VARCHAR}, #{isban,jdbcType=BIT}, 
+      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{county,jdbcType=VARCHAR}, 
+      #{provinceid,jdbcType=INTEGER}, #{cityid,jdbcType=INTEGER}, #{countyid,jdbcType=INTEGER}, 
+      #{userphoto,jdbcType=LONGVARCHAR}, #{addressdetails,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.SysUserDto" >
+    update sys_user
+    set userName = #{username,jdbcType=VARCHAR},
+      nickName = #{nickname,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      userPhone = #{userphone,jdbcType=VARCHAR},
+      userTypeId = #{usertypeid,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      wxOpenId = #{wxopenid,jdbcType=VARCHAR},
+      wxUnionId = #{wxunionid,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=INTEGER},
+      realName = #{realname,jdbcType=VARCHAR},
+      idCardCode = #{idcardcode,jdbcType=VARCHAR},
+      isBan = #{isban,jdbcType=BIT},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      provinceId = #{provinceid,jdbcType=INTEGER},
+      cityId = #{cityid,jdbcType=INTEGER},
+      countyId = #{countyid,jdbcType=INTEGER},
+      userPhoto = #{userphoto,jdbcType=LONGVARCHAR},
+      addressDetails = #{addressdetails,jdbcType=LONGVARCHAR}
+    where sysUserId = #{sysuserid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select sysUserId, userName, nickName, password, userPhone, userTypeId, createTime, 
+    updateTime, status, wxOpenId, wxUnionId, sex, realName, idCardCode, isBan, province, 
+    city, county, provinceId, cityId, countyId, userPhoto, addressDetails
+    from sys_user
+    where sysUserId = #{sysuserid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select sysUserId, userName, nickName, password, userPhone, userTypeId, createTime, 
+    updateTime, status, wxOpenId, wxUnionId, sex, realName, idCardCode, isBan, province, 
+    city, county, provinceId, cityId, countyId, userPhoto, addressDetails
+    from sys_user
+  </select>
+</mapper>

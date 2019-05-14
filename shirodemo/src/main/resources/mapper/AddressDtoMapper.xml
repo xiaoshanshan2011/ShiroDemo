@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.AddressDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.AddressDto" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="VARCHAR" />
+    <result column="sysUserId" property="sysuserid" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="userPhone" property="userphone" jdbcType="BIGINT" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="county" property="county" jdbcType="VARCHAR" />
+    <result column="provinceId" property="provinceid" jdbcType="INTEGER" />
+    <result column="cityId" property="cityid" jdbcType="INTEGER" />
+    <result column="countyId" property="countyid" jdbcType="INTEGER" />
+    <result column="addressDetails" property="addressdetails" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_address
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.AddressDto" >
+    insert into tb_address (id, userId, sysUserId, 
+      createTime, updateTime, userName, 
+      userPhone, province, city, 
+      county, provinceId, cityId, 
+      countyId, addressDetails)
+    values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{sysuserid,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=BIGINT}, #{updatetime,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, 
+      #{userphone,jdbcType=BIGINT}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{provinceid,jdbcType=INTEGER}, #{cityid,jdbcType=INTEGER}, 
+      #{countyid,jdbcType=INTEGER}, #{addressdetails,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.AddressDto" >
+    update tb_address
+    set userId = #{userid,jdbcType=VARCHAR},
+      sysUserId = #{sysuserid,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT},
+      userName = #{username,jdbcType=VARCHAR},
+      userPhone = #{userphone,jdbcType=BIGINT},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      provinceId = #{provinceid,jdbcType=INTEGER},
+      cityId = #{cityid,jdbcType=INTEGER},
+      countyId = #{countyid,jdbcType=INTEGER},
+      addressDetails = #{addressdetails,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, userId, sysUserId, createTime, updateTime, userName, userPhone, province, 
+    city, county, provinceId, cityId, countyId, addressDetails
+    from tb_address
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, userId, sysUserId, createTime, updateTime, userName, userPhone, province, 
+    city, county, provinceId, cityId, countyId, addressDetails
+    from tb_address
+  </select>
+</mapper>

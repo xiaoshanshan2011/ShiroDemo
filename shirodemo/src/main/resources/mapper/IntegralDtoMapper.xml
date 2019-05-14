@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.IntegralDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.IntegralDto" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="VARCHAR" />
+    <result column="sysUserId" property="sysuserid" jdbcType="VARCHAR" />
+    <result column="grade" property="grade" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+    <result column="details" property="details" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_integral
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.IntegralDto" >
+    insert into tb_integral (id, userId, sysUserId, 
+      grade, createTime, updateTime, 
+      details)
+    values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{sysuserid,jdbcType=VARCHAR}, 
+      #{grade,jdbcType=INTEGER}, #{createtime,jdbcType=BIGINT}, #{updatetime,jdbcType=BIGINT}, 
+      #{details,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.IntegralDto" >
+    update tb_integral
+    set userId = #{userid,jdbcType=VARCHAR},
+      sysUserId = #{sysuserid,jdbcType=VARCHAR},
+      grade = #{grade,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT},
+      details = #{details,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, userId, sysUserId, grade, createTime, updateTime, details
+    from tb_integral
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, userId, sysUserId, grade, createTime, updateTime, details
+    from tb_integral
+  </select>
+</mapper>

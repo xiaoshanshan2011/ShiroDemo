@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shan.shirodemo.mapper.ProductOrderDtoMapper" >
+  <resultMap id="BaseResultMap" type="com.shan.shirodemo.dto.ProductOrderDto" >
+    <id column="orderId" property="orderid" jdbcType="VARCHAR" />
+    <result column="orderCode" property="ordercode" jdbcType="BIGINT" />
+    <result column="sysUserId" property="sysuserid" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="updateTime" property="updatetime" jdbcType="BIGINT" />
+    <result column="deliverMoney" property="delivermoney" jdbcType="DOUBLE" />
+    <result column="totalMoney" property="totalmoney" jdbcType="DOUBLE" />
+    <result column="payFrom" property="payfrom" jdbcType="BIT" />
+    <result column="isPay" property="ispay" jdbcType="BIT" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="userPhone" property="userphone" jdbcType="BIGINT" />
+    <result column="isRefund" property="isrefund" jdbcType="BIT" />
+    <result column="receiveTime" property="receivetime" jdbcType="BIGINT" />
+    <result column="deliveryTime" property="deliverytime" jdbcType="BIGINT" />
+    <result column="expressName" property="expressname" jdbcType="VARCHAR" />
+    <result column="productList" property="productlist" jdbcType="LONGVARCHAR" />
+    <result column="userAddress" property="useraddress" jdbcType="LONGVARCHAR" />
+    <result column="orderRemarks" property="orderremarks" jdbcType="LONGVARCHAR" />
+    <result column="expressNo" property="expressno" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_product_order
+    where orderId = #{orderid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.shan.shirodemo.dto.ProductOrderDto" >
+    insert into tb_product_order (orderId, orderCode, sysUserId, 
+      userId, status, createTime, 
+      updateTime, deliverMoney, totalMoney, 
+      payFrom, isPay, userName, userPhone, 
+      isRefund, receiveTime, deliveryTime, 
+      expressName, productList, userAddress, 
+      orderRemarks, expressNo)
+    values (#{orderid,jdbcType=VARCHAR}, #{ordercode,jdbcType=BIGINT}, #{sysuserid,jdbcType=VARCHAR}, 
+      #{userid,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{createtime,jdbcType=BIGINT}, 
+      #{updatetime,jdbcType=BIGINT}, #{delivermoney,jdbcType=DOUBLE}, #{totalmoney,jdbcType=DOUBLE}, 
+      #{payfrom,jdbcType=BIT}, #{ispay,jdbcType=BIT}, #{username,jdbcType=VARCHAR}, #{userphone,jdbcType=BIGINT}, 
+      #{isrefund,jdbcType=BIT}, #{receivetime,jdbcType=BIGINT}, #{deliverytime,jdbcType=BIGINT}, 
+      #{expressname,jdbcType=VARCHAR}, #{productlist,jdbcType=LONGVARCHAR}, #{useraddress,jdbcType=LONGVARCHAR}, 
+      #{orderremarks,jdbcType=LONGVARCHAR}, #{expressno,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.shan.shirodemo.dto.ProductOrderDto" >
+    update tb_product_order
+    set orderCode = #{ordercode,jdbcType=BIGINT},
+      sysUserId = #{sysuserid,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=BIGINT},
+      updateTime = #{updatetime,jdbcType=BIGINT},
+      deliverMoney = #{delivermoney,jdbcType=DOUBLE},
+      totalMoney = #{totalmoney,jdbcType=DOUBLE},
+      payFrom = #{payfrom,jdbcType=BIT},
+      isPay = #{ispay,jdbcType=BIT},
+      userName = #{username,jdbcType=VARCHAR},
+      userPhone = #{userphone,jdbcType=BIGINT},
+      isRefund = #{isrefund,jdbcType=BIT},
+      receiveTime = #{receivetime,jdbcType=BIGINT},
+      deliveryTime = #{deliverytime,jdbcType=BIGINT},
+      expressName = #{expressname,jdbcType=VARCHAR},
+      productList = #{productlist,jdbcType=LONGVARCHAR},
+      userAddress = #{useraddress,jdbcType=LONGVARCHAR},
+      orderRemarks = #{orderremarks,jdbcType=LONGVARCHAR},
+      expressNo = #{expressno,jdbcType=LONGVARCHAR}
+    where orderId = #{orderid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select orderId, orderCode, sysUserId, userId, status, createTime, updateTime, deliverMoney, 
+    totalMoney, payFrom, isPay, userName, userPhone, isRefund, receiveTime, deliveryTime, 
+    expressName, productList, userAddress, orderRemarks, expressNo
+    from tb_product_order
+    where orderId = #{orderid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select orderId, orderCode, sysUserId, userId, status, createTime, updateTime, deliverMoney, 
+    totalMoney, payFrom, isPay, userName, userPhone, isRefund, receiveTime, deliveryTime, 
+    expressName, productList, userAddress, orderRemarks, expressNo
+    from tb_product_order
+  </select>
+</mapper>

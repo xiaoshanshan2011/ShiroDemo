@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!-- mysql-connector-java-5.1.46.jar的绝对路径 -->
+    <classPathEntry location="/home/maven/repository/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar" />
+
+    <context id="DB2Tables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!--去掉生成的注解-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!-- 配置数据源 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ShanghaoEnomatic"
+                        userId="root"
+                        password="123456mn">
+            <!--MySQL 8.x 需要指定服务器的时区-->
+            <property name="serverTimezone" value="UTC"/>
+            <!--MySQL 不支持 schema 或者 catalog 所以需要添加这个-->
+            <!--参考 : http://www.mybatis.org/generator/usage/mysql.html-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- 配置生成的javabean所存放的路径和包（使用绝对路径） -->
+        <!--<javaModelGenerator targetPackage="com.shanghao.publib.admin.bean" targetProject="../ShanghaoEnomaticNew/shirodemo/src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+            <property name="rootClass" value="BaseBean"/>
+        </javaModelGenerator>-->
+        <javaModelGenerator targetPackage="com.shan.shirodemo.dto" targetProject="../shirodemo/src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- 配置生成的**Mapper.xml文件所存放的路径和包（使用绝对路径） -->
+        <sqlMapGenerator targetPackage="mapper"  targetProject="../shirodemo/src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 配置生成的**Mapper.java接口文件所存放的路径和包（使用绝对路径） -->
+        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.shanghao.publib.admin.dto" targetProject="../ZhengzhouEnomatic/src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="rootInterface" value="BaseMapper"/>
+        </javaClientGenerator>-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.shan.shirodemo.mapper" targetProject="../shirodemo/src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 指定我们要操作的表名和生成的javabean类名 -->
+        <table tableName="sys_user" domainObjectName="SysUserDto"/>
+        <table tableName="tb_address" domainObjectName="AddressDto"/>
+        <table tableName="tb_advert" domainObjectName="AdvertDto"/>
+        <table tableName="tb_customer_order" domainObjectName="CustomerOrderDto"/>
+        <table tableName="tb_enomatic" domainObjectName="EnomaticDto"/>
+        <table tableName="tb_integral" domainObjectName="IntegralDto"/>
+        <table tableName="tb_message" domainObjectName="MessageDto"/>
+        <table tableName="tb_product" domainObjectName="ProductDto"/>
+        <table tableName="tb_product_order" domainObjectName="ProductOrderDto"/>
+        <table tableName="tb_wine_capacity" domainObjectName="WineCapacityDto"/>
+    </context>
+</generatorConfiguration>
