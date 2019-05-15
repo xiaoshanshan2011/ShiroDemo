@@ -51,4 +51,9 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/**.xml
 
+#配置log路径
+logging:
+    path: ./
+    file: shirodemo.log
+
 

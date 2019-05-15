@@ -8,6 +8,7 @@ public enum ResultEnum {
     NO_TOKEN(203,"token没传"),
     TOKEN_LOGOUT(204,"你的账号已在其他设备登录"),
     REQUEST_ERROR(205,"请求失败(如：某个字段没传)"),
+    NO_PERMISSION(206,"无访问权限"),
     ;
     private Integer code;
     private String msg;
