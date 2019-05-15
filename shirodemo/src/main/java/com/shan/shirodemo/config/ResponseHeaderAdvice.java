@@ -54,7 +54,7 @@ public class ResponseHeaderAdvice implements ResponseBodyAdvice<Object> {
 
         String exposeHeaders = "access-control-expose-headers";
         if(!response.containsHeader(exposeHeaders))
-            response.setHeader(exposeHeaders, "x-auth-token");
+            response.setHeader(exposeHeaders, "shan-auth-token");
 
         return o;
     }

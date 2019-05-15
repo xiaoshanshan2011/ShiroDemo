@@ -138,7 +138,7 @@ public class JwtAuthFilter extends AuthenticatingFilter {
             }
         }
         if (StringUtils.isNotBlank(newToken))
-            httpResponse.setHeader("x-auth-token", newToken);
+            httpResponse.setHeader("shan-auth-token", newToken);
         return true;
     }
 
@@ -150,7 +150,7 @@ public class JwtAuthFilter extends AuthenticatingFilter {
 
     protected String getAuthzHeader(ServletRequest request) {
         HttpServletRequest httpRequest = WebUtils.toHttp(request);
-        String header = httpRequest.getHeader("x-auth-token");
+        String header = httpRequest.getHeader("shan-auth-token");
         return StringUtils.removeStart(header, "Bearer ");
     }
 

@@ -41,7 +41,7 @@ public class LoginController {
             
             UserDto user = (UserDto) subject.getPrincipal();
             String newToken = userService.generateJwtToken(user.getUserId());
-            response.setHeader("x-auth-token", newToken);
+            response.setHeader("shan-auth-token", newToken);
             
             return newToken;
         } catch (AuthenticationException e) {
